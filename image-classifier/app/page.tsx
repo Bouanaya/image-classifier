@@ -6,10 +6,11 @@ import "@tensorflow/tfjs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Upload, Sparkles } from "lucide-react";
+import {Prediction} from '@/types/index'
 
 export default function Home() {
   const [image, setImage] = useState<string | null>(null);
-  const [predictions, setPredictions] = useState<any[]>([]);
+  const [predictions, setPredictions] = useState<Prediction[]>([]);
   const [loading, setLoading] = useState(false);
 
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
